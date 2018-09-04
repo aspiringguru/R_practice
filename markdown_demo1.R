@@ -1,0 +1,5 @@
+data(cars)
+colnames(cars)
+sapply(cars, class)
+head(cars)
+dim(cars)

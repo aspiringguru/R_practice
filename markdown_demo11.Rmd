@@ -1,0 +1,68 @@
+---
+output: html_document
+---
+#Header1
+##Header2
+###header3
+
+
+```{r setup, echo=FALSE, include=FALSE}
+library(knitr)
+library(kableExtra)
+opts_chunk$set(root.dir = "C:\\2018_working\\git_repos\\R_practice")
+getwd()
+
+brand <- c("-pnq-", "-hymix-", "-hanson-")
+i<- 3
+safetyIconFilename <- paste0("icon", brand[i], "safety.png")
+customerValueIconFilename <- paste0("icon", brand[i], "customer_value.png")
+opExcellIconFilename <- paste0("icon", brand[i], "operational_excellence.png")
+```
+
+
+******
+
+```{r cars, echo=FALSE, include=TRUE}
+head(mtcars) %>%
+  kable(booktabs = T) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
+                full_width = F, position = "float_right")
+```
+
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(safetyIconFilename)
+
+```
+
+******
+
+
+```{r echo=FALSE, include=TRUE}
+head(mtcars) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
+                full_width = F, position = "float_right")
+```
+
+
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(customerValueIconFilename)
+
+```
+
+
+```{r echo=FALSE, include=TRUE}
+head(mtcars) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
+                full_width = F, position = "float_right")
+```
+
+
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(opExcellIconFilename)
+
+```

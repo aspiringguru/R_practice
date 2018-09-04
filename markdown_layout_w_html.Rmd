@@ -1,0 +1,48 @@
+---
+output: html_document
+---
+
+
+
+```{r setup, echo=FALSE, include=FALSE}
+library(knitr)
+library(kableExtra)
+opts_chunk$set(root.dir = "C:\\2018_working\\git_repos\\R_practice")
+getwd()
+
+brand <- c("-pnq-", "-hymix-", "-hanson-")
+i<- 3
+safetyIconFilename <- paste0("icon", brand[i], "safety.png")
+customerValueIconFilename <- paste0("icon", brand[i], "customer_value.png")
+opExcellIconFilename <- paste0("icon", brand[i], "operational_excellence.png")
+```
+
+
+<div class="col-md-12" style="border:solid">
+  <div class="row" style="border:solid">
+    <div class="col-md-4" >
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(safetyIconFilename)
+
+```
+    </div>
+    <div class="col-md-4" >
+    </div>
+  </div>
+  <div class="row" style="border:solid">
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(customerValueIconFilename)
+
+```
+  </div>
+  <div class="row" style="border:solid">
+```{r echo=FALSE, fig.cap="", out.width = '10%'}
+
+knitr::include_graphics(opExcellIconFilename)
+
+```
+    </div>
+  </div>
+</div>
